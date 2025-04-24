@@ -36,7 +36,7 @@ model Ride {
   time          String
   seats         Int
   availableSeats Int
-  active    Boolean  @default(false)
+  active    Boolean  @default(true)
   createdAt     DateTime @default(now())
 }
 
@@ -44,7 +44,7 @@ model Booking {
   id         String   @id @default(uuid())
   userId     String
   rideId     String
-  active Boolean @default(false)
+  active Boolean @default(true)
   createdAt  DateTime @default(now())
 }
 
@@ -80,7 +80,7 @@ model Notification {
   profileId  String
   title      String
   message    String
-  isRead     Boolean  @default(false)
+  isRead     Boolean  @default(true)
   createdAt  DateTime @default(now())
 }
 
