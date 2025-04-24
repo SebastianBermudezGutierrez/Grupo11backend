@@ -4,7 +4,7 @@ CREATE TABLE "Booking" (
     "id" TEXT NOT NULL,
     "userId" TEXT NOT NULL,
     "rideId" TEXT NOT NULL,
-    "active" BOOLEAN NOT NULL DEFAULT false,
+    "active" BOOLEAN NOT NULL DEFAULT true,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Booking_pkey" PRIMARY KEY ("id")
@@ -38,7 +38,7 @@ CREATE TABLE "Notification" (
     "profileId" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "message" TEXT NOT NULL,
-    "isRead" BOOLEAN NOT NULL DEFAULT false,
+    "isRead" BOOLEAN NOT NULL DEFAULT true,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Notification_pkey" PRIMARY KEY ("id")
@@ -82,7 +82,7 @@ CREATE TABLE "Ride" (
     "time" TEXT NOT NULL,
     "seats" INTEGER NOT NULL,
     "availableSeats" INTEGER NOT NULL,
-    "active" BOOLEAN NOT NULL DEFAULT false,
+    "active" BOOLEAN NOT NULL DEFAULT true,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Ride_pkey" PRIMARY KEY ("id")
